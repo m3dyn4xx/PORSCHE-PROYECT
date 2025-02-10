@@ -1,0 +1,271 @@
+nav {
+    background-image: url(Imagenes/fondoMenu.jpg);
+    background-position: center;
+    background-size: cover;
+    transform: translateX(-150%);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 100vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    z-index: 1000;
+
+    &>span {
+        font-family: "Lexend Giga", serif;
+        position: absolute;
+        top: 10px;
+        right: -60px;
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        font-weight: 100;
+        font-optical-sizing: auto;
+        font-style: normal;
+        transition: box-shadow 0.3s;
+        color: white;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+        }
+
+    }
+
+    &>ul {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        gap: 10px;
+
+        &>li {
+            width: 85%;
+            padding: 0;
+            list-style: none;
+            font-size: 30px;
+            font-weight: 100;
+            font-family: "Lexend Giga", serif;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+
+            &>.content {
+                padding: 10px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &>svg {
+                    transform: rotate(-45deg);
+                }
+
+                &:hover {
+                    background-color: rgba(129, 129, 129, 0.1);
+                    backdrop-filter: blur(2px);
+                    border-radius: 10px;
+
+                }
+            }
+
+            &>a {
+                width: 100%;
+                text-decoration: none;
+                color: black;
+
+                &>.content {
+                    padding: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    &>svg {
+                        transform: rotate(-45deg);
+                    }
+
+                    &:hover {
+                        background-color: rgba(129, 129, 129, 0.1);
+                        backdrop-filter: blur(2px);
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    &>.account,
+    &>.models {
+        background-image: url(Imagenes/fondoAccount.jpg);
+        background-position: center;
+        background-size: cover;
+        transform: translateX(-150%);
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        width: 600px;
+        height: 100vh;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        background-color: white;
+
+        &>ul {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 0;
+            gap: 10px;
+
+            &>li {
+                width: 85%;
+                padding: 0;
+                list-style: none;
+                font-size: 30px;
+                font-weight: 100;
+                font-family: "Lexend Giga", serif;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                position: relative;
+
+                &>.content {
+                    padding: 10px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    &>svg {
+                        transform: rotate(-45deg);
+                    }
+
+                    &:hover {
+                        background-color: rgb(206, 206, 206);
+                        border-radius: 10px;
+
+                    }
+                }
+
+                &>a {
+                    width: 100%;
+                    text-decoration: none;
+                    color: black;
+
+                    &>.content {
+                        padding: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        &>svg {
+                            transform: rotate(-45deg);
+                        }
+
+                        &:hover {
+                            background-color: rgba(129, 129, 129, 0.2);
+                            backdrop-filter: blur(2px);
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &>span {
+            font-family: "Lexend Giga", serif;
+            position: absolute;
+            top: 10px;
+            right: -60px;
+            width: 40px;
+            height: 40px;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-weight: 100;
+            font-optical-sizing: auto;
+            font-style: normal;
+            transition: box-shadow 0.3s;
+
+            &>svg {
+                transform: rotate(135deg);
+                color: white;
+            }
+
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+
+
+            }
+        }
+
+    }
+
+    &>.models {
+        display: flex;
+        justify-content: center;
+        background-image: none;
+
+        &>.cards {
+            margin: 20px;
+            width: 80%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+
+            flex-direction: column;
+            gap: 20px;
+
+            &>.card {
+                display: flex;
+                height: 130px;
+                width: 100%;
+                flex-direction: row-reverse;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                padding: 30px;
+                font-size: 19px;
+                transition: box-shadow 0.3s;
+                box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+                overflow: hidden;
+
+                & img {
+                    width: 400px;
+                }
+
+                &:hover {
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                    cursor: pointer;
+                    border-radius: 10px;
+                }
+            }
+
+            &>.card-reverse {
+                display: flex;
+                flex-direction: row;
+
+                & img {
+                    width: 400px;
+                }
+            }
+
+            &>.todosModelos {
+                height: 20px;
+            }
+        }
+
+    }
+}

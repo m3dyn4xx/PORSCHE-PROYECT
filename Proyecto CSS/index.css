@@ -1,0 +1,411 @@
+/* Fondo de pantalla */
+html {
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+body{
+    background-color: #fdfdfc;
+    margin: 0;
+    padding: 0;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+        /*HEADER*/
+        &>header{
+            background-image: url(Imagenes/Fondo.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            &>.header__header{
+                display: flex;
+                width: 100%;
+                height: 100px;
+                justify-content: space-between;
+                align-items: center;
+                &>svg{
+                    width: 300px;
+                    cursor: pointer;
+                }
+                &>.header__menu{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 40px;
+                    padding: 5px;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    &>button{
+                        background-color: transparent;
+                        border: none;
+                        display: flex;
+                        flex-direction: column;
+                        border-radius: 10px;
+                        &>.rows{
+                            cursor: pointer;
+                            &>.row{
+                                margin: 0;
+                                padding: 0;
+                                &::after {
+                                    content: "";
+                                    display: block;
+                                    width: 25px;
+                                    height: 2px;
+                                    background-color: black;
+                                    margin: 3px 0; /* Ajusta este valor para reducir el espacio */                    
+        
+                                }
+                            }
+                        }
+                        
+                    }
+                    &>span{
+                        font-size: 20px;
+                    }
+                    &:hover{
+                        background-color: rgb(240, 240, 240);
+                    }
+                }
+                &>.clear{
+                    width: 77.85px;
+                    height: 31px;
+                }
+            }
+            &>nav{
+                background-image: url(Imagenes/fondoMenu.jpg);
+                background-position: center;
+                background-size: cover;
+                transform: translateX(-150%);
+                position: fixed;
+                top: 0;
+                display: flex;
+                justify-content: center;
+                width: 600px;
+                height: 100vh;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                background-color: white;
+                &>span{
+                    font-family: "Lexend Giga", serif;
+                    position: absolute;
+                    top: 10px;
+                    right: -60px;
+                    width: 40px;
+                    height: 40px;
+                    font-size: 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 10px;
+                    font-weight: 100;
+                    font-optical-sizing: auto;
+                    font-style: normal;
+                    transition: box-shadow 0.3s;
+                    &:hover{
+                        cursor: pointer;
+                        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+                    }
+    
+                }
+    
+                &>ul{
+                    margin-top: 100px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                    padding: 0;
+                    gap: 10px;
+                    &>li{
+                        width: 85%;
+                        padding: 0;
+                        list-style: none;
+                        font-size: 30px;
+                        font-weight: 100;
+                        font-family: "Lexend Giga", serif;
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                        position: relative;
+                        &>.content{
+                            padding: 10px;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            
+                            &>svg{
+                                transform: rotate(-45deg);
+                            }
+                            &:hover{
+                                background-color: rgba(129, 129, 129, 0.1);
+                                backdrop-filter: blur(2px);
+                                border-radius: 10px;
+                               
+                            }
+                        }
+                        &>a{
+                            width: 100%;
+                            text-decoration: none;
+                            color: black;
+                            &>.content{
+                                padding: 10px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                
+                                &>svg{
+                                    transform: rotate(-45deg);
+                                }
+                                &:hover{
+                                    background-color: rgba(129, 129, 129, 0.1);
+                                    backdrop-filter: blur(2px);
+                                    border-radius: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                &>.account,&>.models{
+                    background-image: url(Imagenes/fondoAccount.jpg);
+                    background-position: center;
+                    background-size: cover;
+                    transform: translateX(-150%);
+                    position: fixed;
+                    display: flex;
+                    justify-content: center;
+                    width: 600px;
+                    height: 100vh;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                    background-color: white;
+                    &>ul{
+                        margin-top: 100px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 100%;
+                        padding: 0;
+                        gap: 10px;
+                        &>li{
+                            width: 85%;
+                            padding: 0;
+                            list-style: none;
+                            font-size: 30px;
+                            font-weight: 100;
+                            font-family: "Lexend Giga", serif;
+                            display: flex;
+                            align-items: center;
+                            cursor: pointer;
+                            position: relative;
+                            &>.content{
+                                padding: 10px;
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                
+                                &>svg{
+                                    transform: rotate(-45deg);
+                                }
+                                &:hover{
+                                    background-color: rgb(206, 206, 206);
+                                    border-radius: 10px;
+                                    
+                                }
+                            }
+                            &>a{
+                                width: 100%;
+                                text-decoration: none;
+                                color: black;
+                                &>.content{
+                                    padding: 10px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    
+                                    &>svg{
+                                        transform: rotate(-45deg);
+                                    }
+                                    &:hover{
+                                        background-color: rgba(129, 129, 129, 0.2);
+                                        backdrop-filter: blur(2px);
+                                        border-radius: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &>span{
+                        font-family: "Lexend Giga", serif;
+                        position: absolute;
+                        top: 10px;
+                        right: -60px;
+                        width: 40px;
+                        height: 40px;
+                        font-size: 15px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 10px;
+                        font-weight: 100;
+                        font-optical-sizing: auto;
+                        font-style: normal;
+                        transition: box-shadow 0.3s;
+                        &>svg{
+                            transform: rotate(135deg);
+                        }
+                        &:hover{
+                            cursor: pointer;
+                            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+                        }
+                    }
+                
+                }
+
+                &>.models{
+                    display: flex;
+                    justify-content: center;
+                    background-image: none;
+                    &>.cards{
+                        margin: 20px;
+                        width: 80%;
+                        height: 100vh;
+                        display: flex;
+                        align-items: center;
+                        
+                        flex-direction: column;
+                        gap: 20px;
+                        &>.card{
+                            display: flex;
+                            height: 130px;
+                            width: 100%;
+                            flex-direction: row-reverse;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 10px;
+                            padding: 30px;
+                            font-size: 19px;
+                            transition: box-shadow 0.3s;
+                            box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+                            overflow: hidden;
+                            & img{
+                                width: 400px;
+                            }
+                            &:hover{
+                                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                                cursor: pointer;
+                                border-radius: 10px;
+                            }
+                        }
+                        &>.card-reverse{
+                            display: flex;
+                            flex-direction: row;
+
+                            & img{
+                                width: 400px;
+                            }
+                        }
+                        &>.todosModelos{
+                            height: 20px;
+                        }
+                    }
+                    
+                }
+            }
+            &>a{
+                color: black;
+                &>.arrow__down{
+                    cursor: pointer;
+                    position: absolute;
+                    bottom: 75px;
+                    left: 50%;
+                    width: 0;
+                    height: 0;
+             
+                    &>svg{
+                        animation: pulse-animation 2s infinite;
+                        border: 1px solid;
+                        padding: 10px;
+                        border-radius: 100%;
+                    }
+                }
+            }
+            
+        }
+        /*MAIN*/
+        &>main{
+
+            padding-top: 50px;
+            padding-bottom: 50px;
+            display: flex;    
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+
+            &>.main__header{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                &>h1{
+                    font-size: 50px;
+                    font-family: "Lexend Giga", serif;
+                    font-weight: 100;
+                }
+            }
+            &>.cards{
+                width: 90%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                gap: 20px;
+    
+                &>.card{
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: center;
+                    border-radius: 10px;
+                    padding: 30px;
+                    font-size: 19px;
+                    transition: box-shadow 0.3s;
+                    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+                    &:hover{
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                        cursor: pointer;
+                    }
+                }
+    
+                &>.card-reverse{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    border-radius: 10px;
+                    padding: 30px;
+                    font-size: 20px;
+                    &:hover{
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
+                    }
+                }
+            }
+        }
+        /*FOOTER*/
+        &>footer{
+            margin-top: 50px;
+            background-color: #474747;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+    
+        }
+    }
+    /*ANIMACION*/
+@keyframes pulse-animation {
+    0% {
+      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+}
