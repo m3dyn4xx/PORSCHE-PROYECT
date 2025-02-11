@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
 
     <link rel="stylesheet" href="contacto.css">
@@ -165,41 +166,104 @@
                                     <path d="M502 221c48.1 0 74-25.9 74-74V74c0-48.1-25.9-74-74-74H0v300h68v-79h434zm6-143v65c0 7.8-4.2 12-12 12H68V66h428c7.8 0 12 4.2 12 12zm228 222c-48.1 0-74-25.9-74-74V74c0-48.1 25.9-74 74-74h417c48.1 0 74 25.9 74 74v152c0 48.1-25.9 74-74 74H736zm411-66c7.8 0 12-4.2 12-12V78c0-7.8-4.2-12-12-12H742c-7.8 0-12 4.2-12 12v144c0 7.8 4.2 12 12 12h405zm675-36c39.844 16.757 67.853 56.1 68 102h-68c0-54-25-79-79-79h-361v79h-68V0h502c48.1 0 74 25.9 74 74v50.14c0 46.06-23.75 71.76-68 73.86zm-12-43c7.8 0 12-4.2 12-12V78c0-7.8-4.2-12-12-12h-428v89h428zm162-81c0-48.1 25.9-74 74-74h492v56h-486c-7.8 0-12 4.2-12 12v42c0 7.8 4.2 12 12 12h422c48.1 0 74 25.9 74 74v30c0 48.1-25.9 74-74 74h-492v-56h486c7.8 0 12-4.2 12-12v-42c0-7.8-4.2-12-12-12h-422c-48.1 0-74-25.9-74-74V74zm661 0c0-48.1 25.9-74 74-74h480v66h-474c-7.8 0-12 4.2-12 12v144c0 7.8 4.2 12 12 12h474v66h-480c-48.1 0-74-25.9-74-74V74zM3817 0v300h-68V183h-407v117h-68V0h68v117h407V0h68zm156 56v66h527v56h-527v66h527v56h-595V0h595v56h-527z"></path>
                                 </svg>
                             </div>
-                            <h1>¡Bienvenido! Inicia Sesion con su Porsche ID</h1>
+                            <h1>¡Bienvenido! Estamos aquí para ayudarte.</h1>
                             <br>
-                            <p>Por favor, introduzca la dirección de correo electrónico que definió como su Porsche ID.</p>
+                            <p>Por favor, introduzca los datos acontinuacion para contactar con nuestro equipo soporte técico.</p>
                         </div>
                         <br>
 
                         <form>
                             <div class="form">
-                                <input type="text" id="id" name="id" required>
-                                <label for="id">Porche ID*</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                                <label for="nombre">Nombre *</label>
                             </div>
-                            <input type="submit" value="Inciar sesión con contraseña">
+                            <div class="form">
+                                <input type="text" id="appellidos" name="appellidos" required>
+                                <label for="appellidos">Apelldios *</label>
+                            </div>
+                            <div class="form">
+                                <input type="email" id="ce" name="ce" required placeholder=" " oninput="checkInput(this)">
+                                <label for="ce">Correo electrónico*</label>
+                            </div>
+                            <div class="form">
+                                <textarea name="" id="" maxlength="200" placeholder="Mensaje..."></textarea>
+                                <div class="caracteres"><span class="contador">0</span>/200&nbsp<span class="error"></span></div>
+                            </div>
+                            <input type="submit" value="Enviar">
                         </form>    
                         <br>        
-                        <div class="main">
-                            <header>
-                                <p>¿No tienes un Porsche ID? <a href="registro.html">Regístrese</a></p>
-                            </header>
-                            <br>
-                            <div class="or-seperator">
-                                <span>INICIAR SESIÓN SIN CONTRASEÑA</span>
-                            </div>
-                            <br><br>
-                            <button>
-                                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg>
-                                <p>Inciar sesión con correo electrónico</p>
-                            </button>
-
-                        </div>
                     </div>
                 </div>
-            </main>
-        </header>
 
+            </main>
+
+            <div class="mensaje"></div>
+        </header>
         <script>
+            const textarea = document.querySelector("textarea");
+            const contador = document.querySelector(".contador");
+            const caracteres = document.querySelector(".caracteres");
+            const error = document.querySelector(".error");         
+            error.textContent = " "
+
+            const enviado = document.querySelector(".mensaje");
+            const form = document.querySelector("form");
+
+            form.addEventListener("submit", () => {
+                event.preventDefault();  // Evita que la página se recargue
+                enviado.style.transform = 'translate(0)';
+                enviado.style.transition = 'transform .5s ease'
+
+                var typed = new Typed('.mensaje', {
+                    strings: ['¡Mensaje enviado correctamente!', 'Se te redireccionará automaticamente.'],
+                    typeSpeed: 30,
+                });
+                enviado.style.animation = 'popupMovement .5s'
+
+                setTimeout(() => {
+                    enviado.style.transform = 'translate(500px)';
+                    enviado.style.transition = 'transform .5s ease'
+
+
+                }, 6000);
+                setTimeout(() => {
+                    form.submit();
+                    window.location.href = "index.html";
+                }, 6250);
+            });
+
+            textarea.addEventListener("input", () => {
+                contador.textContent = textarea.value.length;
+                if(textarea.value.length == 0){
+                    caracteres.style.color = 'black'
+                    error.textContent = " "
+                }
+                else if(textarea.value.length<150){
+                    caracteres.style.color = 'green'
+                    error.textContent = " "
+                }
+                else if(textarea.value.length<200){
+                    caracteres.style.color = 'orange'
+                    error.textContent = " "
+
+                }
+                else if(textarea.value.length<=200){
+                    caracteres.style.color = 'red';
+                    limiteAlcanzado = true
+                    textarea.addEventListener("keydown", (event) => {   
+                        error.textContent = "¡Límite alcanzado!"; // Mostramos el error solo si ya llegó al límite
+                    });
+                    
+                }
+
+                
+            }); 
+
+            textarea.addEventListener("keydown", (event) => {
+                if (event.key === "Enter") {
+                    event.preventDefault(); // Bloquea la tecla Enter
+                }                
+            });
 
             const showPopUpButton = document.querySelector('.header__menu');
             const popup = document.querySelector('nav');
@@ -262,21 +326,13 @@
                 closeBtn.style.right = '-60px'; // Ocultar el botón de cerrar
                 closeBtn.style.transition = 'right 0.5s ease'; // Efecto de transición
             });
-    
-            document.querySelector("a[href='#main']").addEventListener("click", function(e) {
-                e.preventDefault(); // Evita el salto inmediato
-                document.querySelector("#main").scrollIntoView({ behavior: "smooth" });
-            });
-    
-    
-            if(arrowDown.getAttribute('style') === 'bottom: -100px') {
-                arrowDown.style.display = 'none';
+            function checkInput(input) {
+                if (input.value.trim() !== "") {
+                    input.classList.add("has-content");
+                } else {
+                    input.classList.remove("has-content");
+                }
             }
-            else {
-                arrowDown.style.display = 'block';
-            }
-    
-    
         </script>
 </body>
 </html>

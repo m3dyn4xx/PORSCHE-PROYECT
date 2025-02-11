@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    background-color: #fdfdfc;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
 
@@ -113,60 +113,85 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 87vh;
-
+            height: 87.7vh;
+            position: relative;
             &>.cards{
+                width: 75%;
+                height: 75%;
                 display: grid;
-                grid-template-rows: repeat(3,1fr);
+                grid-template-rows: repeat(4,1fr);
                 grid-template-columns: repeat(3,1fr);
                 grid-template-areas: 
-                "nh ngm cf"
-                "pm fv ep"
+                "fv fv cf"
+                "pm nh cf"
+                "ngv nh cf"
+                "ngv nh ep"
                 "cont cont cont"
+
                 ;
-                gap: 10px;
+                gap: 20px;
                 &>div{
-                    font-family: "Lexend Giga", serif;
                     font-weight: 100;
                     font-optical-sizing: auto;
                     font-style: normal;
                     box-shadow: 0 0 5px black;
-                    border-radius: 10px;
-                    padding: 10px;
-                    font-size: 13px;
+                    font-size: 15px;
                     text-align: center;
-                    background-color: #fdfdfc4d;
-                    backdrop-filter: blur(7px);
                     cursor: pointer;
-                    transition: box-shadow 0.3s;
-                    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-                    font
-                    &:hover{
-                        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-                    }
-                }
-                
+                    border-radius: 10px;
+                    transition: all 0.3s;
+                    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 
+                    &:hover{
+                        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+                    }
+                    & div{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 10px;
+                        height: 100%;
+                        width: 100%;
+                        background-color: rgba(255, 255, 255, 0.5);
+                        backdrop-filter: blur(2px);
+                    }
+
+                }
                 &>.nh{
                     grid-area: nh;
+                    position: relative;
+                    background-image: url(Imagenes/png-clipart-porsche-911-car-desktop-logo-porsche-emblem-label-thumbnail-removebg-preview.png);
+                    background-position: center;
+                    
                 }
-                &>.ngm{
-                    grid-area: ngm;
+                &>.ngv{
+                    grid-area: ngv;
+                    background-image: url(Imagenes/1366_2000__1_-removebg-preview.png);
+                    background-position: center;
+                    background-size: contain;
                 }
                 &>.cf{
                     grid-area: cf;
+                    background-image: url(Imagenes/images-removebg-preview.png);
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+
                 }
                 &>.pm{
                     grid-area: pm;
+                    background-image: url(Imagenes/porsche-motorsport-6-7445-image-small.png);
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
                 }
                 &>.fv{
                     grid-area: fv;
+                    background-image: url(Imagenes/Como-entender-la-filosofia-removebg-preview.png);
+                    background-position: center;                    
                 }
                 &>.ep{
                     grid-area: ep;
-                }
-                &>.fv{
-                    grid-area: fv;
                 }
                 &>.cont{
                     grid-area: cont;
@@ -174,6 +199,49 @@ body {
 
 
             }
+
+            &>dialog{
+                width: 50%;
+                padding: 0;
+                border: none;
+                margin: auto;
+                background-color: transparent;
+                &>main{
+                    padding: 40px;
+                    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+                    background-color: #ffffff;
+                    border-radius: 10px;
+                    &>span{
+                        font-family: "Lexend Giga", serif;
+                        cursor: pointer;
+                        margin: 0;
+                        position: absolute;
+                        top: 3px;
+                        right: 3px;
+                        height: 15px;
+                        width: 15px;
+                        padding: 3px;
+                        display: flex;
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 100%;
+                        font-size: 13px;
+                        &:hover{
+                            background-color: rgb(255, 65, 65);
+                        }
+                    }
+                }
+                &::backdrop{
+                    background-color: rgba(0, 0, 0, 0.8);
+
+                    border: none;
+                }
+                &:focus{
+                    outline: none;
+                }
+            }
+            
         }
     }
 }
