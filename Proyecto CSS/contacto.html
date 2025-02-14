@@ -108,7 +108,7 @@
 
                         <div class="card todosModelos">
                             <header>
-                                <h1>Todos Los Modelos</h1>
+                                <h1 onclick="window.location.href='modelo.html'">Todos Los Modelos</h1>
                             </header>
                         </div>
 
@@ -216,7 +216,7 @@
 
                 var typed = new Typed('.mensaje', {
                     strings: ['¡Mensaje enviado correctamente!', 'Se te redireccionará automaticamente.'],
-                    typeSpeed: 30,
+                    typeSpeed: 20,
                 });
                 enviado.style.animation = 'popupMovement .5s'
 
@@ -225,7 +225,7 @@
                     enviado.style.transition = 'transform .5s ease'
 
 
-                }, 6000);
+                }, 5000);
                 setTimeout(() => {
                     form.submit();
                     window.location.href = "index.html";

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+    <!-- Metadatos esenciales -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Imagenes/Logo (Negro).png" type="image/png">
+    <link rel="shortcut icon" href="Imagenes/Favicon.ico" type="image/x-icon">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="modelo.css">
+    <link rel="stylesheet" href="nav.css">
+    <title>Inicar Sesión</title>
+</head>
+<body>
+    <header>
+        <div class="header__header">
+            <div class="header__menu">
+                <button>
+                    <div class="rows">
+                        <span class="row"></span>
+                        <span class="row"></span>
+                        <span class="row"></span>
+                    </div>
+                </button>
+                <span>Menú</span>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4500 300" onclick="window.location.href='index.html'" fill="#fff"><title>Porsche.com</title>
+                <path d="M502 221c48.1 0 74-25.9 74-74V74c0-48.1-25.9-74-74-74H0v300h68v-79h434zm6-143v65c0 7.8-4.2 12-12 12H68V66h428c7.8 0 12 4.2 12 12zm228 222c-48.1 0-74-25.9-74-74V74c0-48.1 25.9-74 74-74h417c48.1 0 74 25.9 74 74v152c0 48.1-25.9 74-74 74H736zm411-66c7.8 0 12-4.2 12-12V78c0-7.8-4.2-12-12-12H742c-7.8 0-12 4.2-12 12v144c0 7.8 4.2 12 12 12h405zm675-36c39.844 16.757 67.853 56.1 68 102h-68c0-54-25-79-79-79h-361v79h-68V0h502c48.1 0 74 25.9 74 74v50.14c0 46.06-23.75 71.76-68 73.86zm-12-43c7.8 0 12-4.2 12-12V78c0-7.8-4.2-12-12-12h-428v89h428zm162-81c0-48.1 25.9-74 74-74h492v56h-486c-7.8 0-12 4.2-12 12v42c0 7.8 4.2 12 12 12h422c48.1 0 74 25.9 74 74v30c0 48.1-25.9 74-74 74h-492v-56h486c7.8 0 12-4.2 12-12v-42c0-7.8-4.2-12-12-12h-422c-48.1 0-74-25.9-74-74V74zm661 0c0-48.1 25.9-74 74-74h480v66h-474c-7.8 0-12 4.2-12 12v144c0 7.8 4.2 12 12 12h474v66h-480c-48.1 0-74-25.9-74-74V74zM3817 0v300h-68V183h-407v117h-68V0h68v117h407V0h68zm156 56v66h527v56h-527v66h527v56h-595V0h595v56h-527z"></path>
+            </svg>
+            <div class="clear">
+
+            </div>
+
+        </div>
+
+        <nav>
+            <span class="close">X</span>
+            <ul>
+                <li>
+                    <a href="sobreNosotros.html">
+                        <div class="content">
+                            Sobre Nosotros
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <div class="content models__popup">
+                        Modelos
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 8v8h-8" /></svg>
+                    </div>
+                </li>
+
+                <li><a href="contacto.html">
+                    <div class="content">
+                        Contacto
+                    </div></a>
+                </li>
+
+                <li>
+                    <div class="content account__popup">
+                        Mi cuenta
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 8v8h-8" /></svg>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="account">
+                <span class="close__account">
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 8v8h-8" /></svg>
+                </span>
+
+                <ul>
+                    <li><a href="registro.html">
+                            <div class="content">
+                                Crear Cuenta
+                                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 8v8h-8" /></svg>
+                            </div>
+                        </a>
+                    </li>
+    
+                    <li><a href="inicioSesion.html">
+                        <div class="content">
+                            Iniciar Sesión
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 8v8h-8" /></svg>
+                        </div></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="models">
+                <span class="close__models">
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 8v8h-8" /></svg>
+                </span>
+
+                <div class="cards">
+
+                    <div class="card todosModelos">
+                        <header>
+                            <h1>Todos Los Modelos</h1>
+                        </header>
+                    </div>
+
+                    <div class="card">
+                        <header>
+                            <h1>Porsche 911</h1>
+                        </header>
+                        <main>
+                            <img src="Imagenes/Porshe911GT3.png" alt="">
+                        </main>
+                    </div>
+    
+                    <div class="card card-reverse">
+                        <header>
+                            <h1>Porsche Taycan</h1>
+                        </header>
+                        <main>
+                            <img src="Imagenes/TaycanTurboGT.png" alt="">
+                        </main>
+                    </div>
+    
+                    <div class="card">
+                        <header>
+                            <h1>Porsche 718</h1>
+                        </header>
+                        <main>
+                            <img src="Imagenes/Porsche718CaymanGT4RS.png" alt="">
+                        </main>
+                    </div>
+    
+                    <div class="card card-reverse">
+                        <header>
+                            <h1>Porsche Cayenne</h1>
+                        </header>
+                        <main>
+                            <img src="Imagenes/PorscheCayenneGTS.png" alt="">
+                        </main>
+                    </div>
+
+
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <div class="container">
+                <aside class="filtros">
+                    <h1>Filtros</h1>
+                    <h4>Modelos</h4>
+                    <label class="checkbox-container">
+                        <input type="checkbox" class="b911">
+                        <div class="box">
+                            <span class="cross"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg></span>
+                            <span>911</span>
+                        </div>
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" class="b718">
+                        <div class="box">
+                            <span class="cross"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg></span>
+                            <span>718</span>
+                        </div>
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" class="bTaycan">
+                        <div class="box">
+                            <span class="cross"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg></span>
+                            <span>Taycan</span>
+                        </div>
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" class="bCayenne">
+                        <div class="box">
+                            <span class="cross"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg></span>
+                            <span>Cayenne</span>
+                        </div>
+                    </label>
+                </aside>
+                <main class="main">
+                    <div class="modelos p911">
+                        <h1>                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 8v8h-8" /></svg>                            
+                            Modelos 911 Carrera Coupe
+                        </h1>
+                        <div class="cards">
+                            <div class="card">
+                                <img src="Imagenes/911Carrera.avif" alt="">
+                                <div class="txt">
+                                    <p>911 Carrera <br>Desde EUR 149.302,00 PVP Recomendado¹</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="Imagenes/911CarreraS.avif" alt="">
+                                <div class="txt">
+                                    <p>911 Carrera S <br><span>Nuevo</span><br>Desde EUR 177.947,00 PVP Recomendado¹</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="Imagenes/911CarreraGTS.avif" alt="">
+                                <div class="txt">
+                                    <p>911 Carrera GTS <br>Desde EUR 198.102,00 PVP Recomendado ¹</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modelos p911">
+                        <h1>                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 8v8h-8" /></svg>                            
+                            Modelos 911 GT3
+                        </h1>
+                        <div class="cards">
+                            <div class="card">
+                                <img src="Imagenes/911GT3.avif" alt="">
+                                <div class="txt">
+                                    <p>911 GT3 <br><span>Nuevo</span><br>Desde EUR 240.815,00 PVP Recomendado¹</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="Imagenes/911GT3Paquete.avif" alt="">
+                                <div class="txt">
+                                    <p>911 GT3 con Paquete Touring <br><span>Nuevo</span><br>Desde EUR 240.815,00 PVP Recomendado¹</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modelos p718">
+                        <h1>                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 8v8h-8" /></svg>                            
+                            Modelos 718 Cayman GT4 RS
+                        </h1>
+                        <div class="cards">
+                            <div class="card">
+                                <img src="Imagenes/718CaymanGT4RS.avif" alt="">
+                                <div class="txt">
+                                    <p>911 GT3 <br>Desde EUR 180.709,00 PVP Recomendado¹</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modelos p718">
+                        <h1>                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 8v8h-8" /></svg>                            
+                            Modelos 718 Spyder RS
+                        </h1>
+                        <div class="cards">
+                            <div class="card">
+                                <img src="Imagenes/718SpyderRS.avif" alt="">
+                                <div class="txt">
+                                    <p>718 Spyder RS <br>Desde EUR 180.709,00 PVP Recomendado¹</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modelos pTycan">
+                        <h1>                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 8v8h-8" /></svg>                            
+                            Modelos Taycan
+                        </h1>
+                        <div class="cards">
+                            <div class="card">
+                                <img src="Imagenes/Taycan.avif" alt="">
+                                <div class="txt">
+                                    <p>Taycan <br>Desde EUR 105.682,00 PVP Recomendado¹</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="Imagenes/Taycan.avif" alt="">
+                                <div class="txt">
+                                    <p>Taycan 4 <br><span>Nuevo</span><br>Desde EUR 110.781,00 PVP Recomendado¹</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="Imagenes/Taycan4S.avif" alt="">
+                                <div class="txt">
+                                    <p>Taycan 4S <br>Desde EUR 125.196,00 PVP Recomendado¹</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="Imagenes/TaycanGTS.avif" alt="">
+                                <div class="txt">
+                                    <p>Taycan GTS <br><span>Nuevo</span><br>Desde EUR 153.589,00 PVP Recomendado¹</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="Imagenes/TaycanTurboGTPaquete.avif" alt="">
+                                <div class="txt">
+                                    <p>Taycan Turbo GT con Paquete Weissach <br><span>Nuevo</span><br>Desde EUR 153.589,00 PVP Recomendado¹</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modelos pCayenne">
+                        <h1>                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 8v8h-8" /></svg>                            
+                            Modelos Cayenne
+                        </h1>
+                        <div class="cards">
+                            <div class="card">
+                                <img src="Imagenes/Cayenne.avif" alt="">
+                                <div class="txt">
+                                    <p>Cayenne <br>Desde EUR 116.038,00 PVP Recomendado¹</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="Imagenes/CayenneEHybrid.avif" alt="">
+                                <div class="txt">
+                                    <p>Cayenne E-Hybrid <br>Desde EUR 118.409,00 PVP Recomendado¹</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="Imagenes/CayenneS.avif" alt="">
+                                <div class="txt">
+                                    <p>Cayenne S <br>Desde EUR 139.027,00 PVP Recomendado¹</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="Imagenes/CayenneSEHybrid.avif" alt="">
+                                <div class="txt">
+                                    <p>Cayenne S E-Hybrid <br>Desde EUR 129.016,00 PVP Recomendado¹</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modelos pCayenne">
+                        <h1>                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 8v8h-8" /></svg>                            
+                            Modelos Cayenne Coupé
+                        </h1>
+                        <div class="cards">
+                            <div class="card">
+                                <img src="Imagenes/CayenneCoupe.avif" alt="">
+                                <div class="txt">
+                                    <p>Cayenne Coupé <br>Desde EUR 119.692,00 PVP Recomendado¹</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="Imagenes/CayenneEHybridCoupe.avif" alt="">
+                                <div class="txt">
+                                    <p>Cayenne E-Hybrid Coupé <br>Desde EUR 121.177,00 PVP Recomendado¹</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </main>
+
+        <div class="mensaje"></div>
+
+    </header>
+
+    <script>
+        
+        const b911 = document.querySelector(".b911")
+        const b718 = document.querySelector(".b718")
+        const bCayenne = document.querySelector(".bCayenne")
+        const bTaycan = document.querySelector(".bTaycan")
+
+        const p911 = document.querySelectorAll(".p911")
+        const p718 = document.querySelectorAll(".p718")
+        const pTaycan = document.querySelectorAll(".pTycan")
+        const pCayenne = document.querySelectorAll(".pCayenne")
+
+
+        b911.addEventListener('change',() =>{
+            if (b911.checked) {
+                b718.disabled = true;
+                b718.style.border = "grey 1px solid"
+
+                bCayenne.disabled = true;
+                bTaycan.disabled = true;
+                p718.forEach(element => {
+                    element.style.display = "none";
+                });
+
+                pTaycan.forEach(element => {
+                    element.style.display = "none";
+                });
+                pCayenne.forEach(element => {
+                    element.style.display = "none";
+                });
+            } else {
+                b718.disabled = false;
+                bCayenne.disabled = false;
+                bTaycan.disabled = false;
+                p718.forEach(element => {
+                    element.style.display = "block";
+                });
+                pTaycan.forEach(element => {
+                    element.style.display = "block";
+                });
+                pCayenne.forEach(element => {
+                    element.style.display = "block";
+                });
+            }
+        })
+        b718.addEventListener('change',() =>{
+            if (b718.checked) {
+                b911.disabled = true;
+                bCayenne.disabled = true;
+                bTaycan.disabled = true;
+                p911.forEach(element => {
+                    element.style.display = "none";
+                });
+                pTaycan.forEach(element => {
+                    element.style.display = "none";
+                });
+                pCayenne.forEach(element => {
+                    element.style.display = "none";
+                });
+            } else {
+                b911.disabled = false;
+                bCayenne.disabled = false;
+                bTaycan.disabled = false;
+                p911.forEach(element => {
+                    element.style.display = "block";
+                });
+                pTaycan.forEach(element => {
+                    element.style.display = "block";
+                });
+                pCayenne.forEach(element => {
+                    element.style.display = "block";
+                });
+            }
+        })
+        bCayenne.addEventListener('change',() =>{
+            if (bCayenne.checked) {
+                b718.disabled = true;
+                b911.disabled = true;
+                bTaycan.disabled = true;
+                p718.forEach(element => {
+                    element.style.display = "none";
+                });
+                pTaycan.forEach(element => {
+                    element.style.display = "none";
+                });
+                p911.forEach(element => {
+                    element.style.display = "none";
+                });
+            } else {
+                b718.disabled = false;
+                bTaycan.disabled = false;
+                b911.disabled = false;
+                p718.forEach(element => {
+                    element.style.display = "block";
+                });
+                pTaycan.forEach(element => {
+                    element.style.display = "block";
+                });
+                p911.forEach(element => {
+                    element.style.display = "block";
+                });
+                console.log("Checkbox desmarcado");
+            }
+        })
+        bTaycan.addEventListener('change',() =>{
+            if (bTaycan.checked) {
+                b718.disabled = true;
+                b911.disabled = true;
+                bCayenne.disabled = true;
+                p718.forEach(element => {
+                    element.style.display = "none";
+                });
+                pCayenne.forEach(element => {
+                    element.style.display = "none";
+                });
+                p911.forEach(element => {
+                    element.style.display = "none";
+                });
+            } else {
+                b718.disabled = false;
+                b911.disabled = false;
+                bCayenne.disabled = false;
+                p718.forEach(element => {
+                    element.style.display = "block";
+                });
+                pCayenne.forEach(element => {
+                    element.style.display = "block";
+                });
+                p911.forEach(element => {
+                    element.style.display = "block";
+                });
+                console.log("Checkbox desmarcado");
+            }
+        })
+        const showPopUpButton = document.querySelector('.header__menu');
+        const popup = document.querySelector('nav');
+        const closeBtn = document.querySelector('.close');
+
+    
+        const body = document.querySelector('body');
+
+        const account = document.querySelector('.account');
+        const accountPopUp = document.querySelector('.account__popup');
+        const closeAccount = document.querySelector('.close__account');
+
+        const models = document.querySelector('.models');
+        const modelPopup = document.querySelector('.models__popup')
+        const closeModels = document.querySelector('.close__models');
+
+        showPopUpButton.addEventListener('click', () => {
+            popup.style.transform = 'translateX(0%)';
+            popup.style.transition = 'transform 0.5s ease'; 
+
+            body.style.overflow = 'hidden'; // Ocultar el scroll
+        });
+
+        closeBtn.addEventListener('click', () => {
+            popup.style.transform = 'translateX(-150%)';
+            body.style.overflow = 'visible'; // Ocultar el scroll
+            account.style.transform = 'translateX(-150%)';
+            closeBtn.style.right = '-60px'; 
+
+            models.style.transform = 'translateX(-150%)';
+            // Cerrar el pop-up
+        });
+
+        accountPopUp.addEventListener('click', () => {
+            account.style.transform = 'translateX(0%)';
+            account.style.transition = 'transform 0.5s ease'; 
+            closeBtn.style.right = '-115px'; 
+            closeBtn.style.transition = 'right 0.5s ease'; 
+        });
+
+        closeAccount.addEventListener('click', () => {
+            account.style.transform = 'translateX(-150%)';
+            account.style.transition = 'transform 0.5s ease'; 
+            closeBtn.style.right = '-60px'; 
+            closeBtn.style.transition = 'right 0.5s ease'; 
+
+        });
+
+
+        modelPopup.addEventListener('click', () => {
+            models.style.transform = 'translateX(0%)';
+            models.style.transition = 'transform 0.5s ease';
+            closeBtn.style.right = '-115px'; 
+            closeBtn.style.transition = 'right 0.5s ease';
+        });
+
+        closeModels.addEventListener('click',() =>{
+            models.style.transform = 'translateX(-150%)';
+            models.style.transition = 'transform 0.5s ease';
+            closeBtn.style.right = '-60px';
+            closeBtn.style.transition = 'right 0.5s ease';
+        });
+    </script>
+</body>
+</html>

@@ -108,7 +108,7 @@
 
                     <div class="card todosModelos">
                         <header>
-                            <h1>Todos Los Modelos</h1>
+                            <h1 onclick="window.location.href='modelo.html'">Todos Los Modelos</h1>
                         </header>
                     </div>
 
@@ -205,28 +205,30 @@
 
     <script>
         const enviado = document.querySelector(".mensaje");
-            const form = document.querySelector("form");
+        const form = document.querySelector("form");
 
-            form.addEventListener("submit", () => {
-                event.preventDefault();  // Evita que la página se recargue
-                enviado.style.transform = 'translate(0)';
+        form.addEventListener("submit", () => {
+            event.preventDefault();  // Evita que la página se recargue
+            enviado.style.transform = 'translate(0)';
+            enviado.style.transition = 'transform .5s ease'
+
+            var typed = new Typed('.mensaje', {
+                strings: ['¡Sesion iniciada correctamente!', 'Se te redireccionará automaticamente.'],
+                typeSpeed: 20,
+            });
+            enviado.style.animation = 'popupMovement .5s'
+
+            setTimeout(() => {
+                enviado.style.transform = 'translate(500px)';
                 enviado.style.transition = 'transform .5s ease'
 
-                var typed = new Typed('.mensaje', {
-                    strings: ['¡Sesión iniciada correctamente!', 'Se te redireccionará automaticamente.'],
-                    typeSpeed: 30,
-                });
-                enviado.style.animation = 'popupMovement .5s'
 
-                setTimeout(() => {
-                    enviado.style.transform = 'translate(500px)';
-                    enviado.style.transition = 'transform .5s ease'
-                }, 6000);
-                setTimeout(() => {
-                    form.submit();
-                    window.location.href = "index.html";
-                }, 6100);
-            });
+            }, 5000);
+            setTimeout(() => {
+                form.submit();
+                window.location.href = "index.html";
+            }, 6250);
+        });
 
         const showPopUpButton = document.querySelector('.header__menu');
         const popup = document.querySelector('nav');

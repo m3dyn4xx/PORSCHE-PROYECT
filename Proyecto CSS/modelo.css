@@ -1,0 +1,538 @@
+/* Fondo de pantalla */
+html {
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+body {
+    background-color: #fdfdfc;
+    margin: 0;
+    padding: 0;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &>header {
+        height: 100%;
+
+        &>.header__header {
+            background-color: rgb(37, 37, 37);
+            display: flex;
+            width: 100%;
+            height: 10vh;
+            justify-content: space-between;
+            align-items: center;
+
+            &>svg {
+                width: 300px;
+                cursor: pointer;
+            }
+
+            &>.header__menu {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 40px;
+                padding: 5px;
+                border-radius: 6px;
+                cursor: pointer;
+                color: white;
+
+                &>button {
+                    background-color: transparent;
+                    border: none;
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 10px;
+
+                    &>.rows {
+                        cursor: pointer;
+
+                        &>.row {
+                            margin: 0;
+                            padding: 0;
+
+                            &::after {
+                                content: "";
+                                display: block;
+                                width: 25px;
+                                height: 2px;
+                                background-color: rgb(255, 255, 255);
+                                margin: 3px 0;
+                                /* Ajusta este valor para reducir el espacio */
+
+                            }
+                        }
+                    }
+
+                }
+
+                &>span {
+                    font-size: 20px;
+                }
+
+                &:hover {
+                    background-color: rgb(99, 99, 99);
+
+
+                }
+            }
+
+            &>.clear {
+                width: 77.85px;
+                height: 31px;
+            }
+        }
+
+        &>nav {
+            background-image: url(Imagenes/fondoMenu.jpg);
+            background-position: center;
+            background-size: cover;
+            transform: translateX(-150%);
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            width: 600px;
+            height: 100vh;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background-color: white;
+
+            &>span {
+                font-family: "Lexend Giga", serif;
+                position: absolute;
+                top: 10px;
+                right: -60px;
+                width: 40px;
+                height: 40px;
+                font-size: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                font-weight: 100;
+                font-optical-sizing: auto;
+                font-style: normal;
+                transition: box-shadow 0.3s;
+                color: white;
+
+                &:hover {
+                    cursor: pointer;
+                    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+                }
+
+            }
+
+            &>ul {
+                margin-top: 100px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                padding: 0;
+                gap: 10px;
+
+                &>li {
+                    width: 85%;
+                    padding: 0;
+                    list-style: none;
+                    font-size: 30px;
+                    font-weight: 100;
+                    font-family: "Lexend Giga", serif;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    position: relative;
+
+                    &>.content {
+                        padding: 10px;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        &>svg {
+                            transform: rotate(-45deg);
+                        }
+
+                        &:hover {
+                            background-color: rgba(129, 129, 129, 0.1);
+                            backdrop-filter: blur(2px);
+                            border-radius: 10px;
+
+                        }
+                    }
+
+                    &>a {
+                        width: 100%;
+                        text-decoration: none;
+                        color: black;
+
+                        &>.content {
+                            padding: 10px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            &>svg {
+                                transform: rotate(-45deg);
+                            }
+
+                            &:hover {
+                                background-color: rgba(129, 129, 129, 0.1);
+                                backdrop-filter: blur(2px);
+                                border-radius: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &>.account,
+            &>.models {
+                background-image: url(Imagenes/fondoAccount.jpg);
+                background-position: center;
+                background-size: cover;
+                transform: translateX(-150%);
+                position: fixed;
+                display: flex;
+                justify-content: center;
+                width: 600px;
+                height: 100vh;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                background-color: white;
+
+                &>ul {
+                    margin-top: 100px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                    padding: 0;
+                    gap: 10px;
+
+                    &>li {
+                        width: 85%;
+                        padding: 0;
+                        list-style: none;
+                        font-size: 30px;
+                        font-weight: 100;
+                        font-family: "Lexend Giga", serif;
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                        position: relative;
+
+                        &>.content {
+                            padding: 10px;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            &>svg {
+                                transform: rotate(-45deg);
+                            }
+
+                            &:hover {
+                                background-color: rgb(206, 206, 206);
+                                border-radius: 10px;
+
+                            }
+                        }
+
+                        &>a {
+                            width: 100%;
+                            text-decoration: none;
+                            color: black;
+
+                            &>.content {
+                                padding: 10px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+
+                                &>svg {
+                                    transform: rotate(-45deg);
+                                }
+
+                                &:hover {
+                                    background-color: rgba(129, 129, 129, 0.2);
+                                    backdrop-filter: blur(2px);
+                                    border-radius: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &>span {
+                    font-family: "Lexend Giga", serif;
+                    position: absolute;
+                    top: 10px;
+                    right: -60px;
+                    width: 40px;
+                    height: 40px;
+                    font-size: 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 10px;
+                    font-weight: 100;
+                    font-optical-sizing: auto;
+                    font-style: normal;
+                    transition: box-shadow 0.3s;
+
+                    &>svg {
+                        transform: rotate(135deg);
+                        color: white;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+
+
+                    }
+                }
+
+            }
+
+            &>.models {
+                display: flex;
+                justify-content: center;
+                background-image: none;
+
+                &>.cards {
+                    margin: 20px;
+                    width: 80%;
+                    height: 100vh;
+                    display: flex;
+                    align-items: center;
+
+                    flex-direction: column;
+                    gap: 20px;
+
+                    &>.card {
+                        display: flex;
+                        height: 130px;
+                        width: 100%;
+                        flex-direction: row-reverse;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 10px;
+                        padding: 30px;
+                        font-size: 19px;
+                        transition: box-shadow 0.3s;
+                        box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+                        overflow: hidden;
+
+                        & img {
+                            width: 400px;
+                        }
+
+                        &:hover {
+                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                            cursor: pointer;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    &>.card-reverse {
+                        display: flex;
+                        flex-direction: row;
+
+                        & img {
+                            width: 400px;
+                        }
+                    }
+
+                    &>.todosModelos {
+                        height: 20px;
+                    }
+                }
+
+            }
+        }
+
+        &>a {
+            color: black;
+
+            &>.arrow__down {
+                cursor: pointer;
+                position: absolute;
+                bottom: 75px;
+                left: 50%;
+                width: 0;
+                height: 0;
+
+                &>svg {
+                    animation: pulse-animation 2s infinite;
+                    border: 1px solid;
+                    padding: 10px;
+                    border-radius: 100%;
+                }
+            }
+        }
+
+        &>main {
+            display: flex;
+            flex-direction: column;
+            padding: 30px 100px;
+        
+            &>.container {
+                display: flex;
+                &>.filtros{
+                    font-family: "Lato", serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    display: flex;
+                    flex-direction: column;
+                    width: 30%;
+                    padding: 20px 100px;
+                    box-sizing: border-box;
+                    gap: 20px;
+                    &>h1,h3{
+                        margin: 0;
+                        padding: 10px 0;
+                    }
+                    &>.box{
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                        border: 1px solid;
+                        width: 125px;
+                        padding: 10px;
+                        transition: color 0.3s ease;
+                        gap: 10px;
+
+                        &>span[class=cross]{
+                            font-size: 20px;
+                            font-weight: bold;
+                            font-family: 'Courier New', Courier, monospace;
+                        }
+                        &:hover{
+                            color: rgb(209, 0, 0);
+                        }
+                    }
+                    
+                }
+                &>.main {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 100px;
+                    &>.modelos {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        &>h1 {
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 10px;
+                            cursor: pointer;
+                            transition: color 0.3s ease;
+                            width: fit-content;
+                            padding: 5px 10px;        
+                            &>svg {
+                                transform: rotate(-45deg) scale(1.5);
+                            }
+                            &:hover {
+                                color: rgb(209, 0, 0);
+                            }
+                        }
+                        &>.cards {
+                            flex-wrap: wrap;
+                            display: flex;
+                            gap: 50px;
+                            &>.card {
+                                &>img {
+                                    width: 350px;
+                                }
+                                &>.txt{
+                                    & span{
+                                        color: rgb(209, 0, 0);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+
+        &>.mensaje{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+            position: absolute;
+            top: 150px;
+            right: 0;
+            padding: 10px;
+            border-radius: 7px 0 0 7px;
+            background-color: rgb(33, 128, 33);
+            transform: translate(500px);
+            width: 350px;
+            height: 30px;
+        }
+    }
+}
+
+.checkbox-container {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox-container input {
+    display: none; /* Ocultamos el checkbox nativo */
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    user-select: none;
+    background-color: #fff;
+    color: #000;
+}
+.box:hover{
+    color: #d80b0b;
+    border: #d80b0b 2px solid;
+}
+.cross{
+    display: flex;
+    align-items: center;
+}
+
+.cross svg {
+    width: 15px;
+    height: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto al seleccionar */
+.checkbox-container input:checked + .box {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+.checkbox-container input:checked + .box:hover {
+    background-color: #d80b0b;
+    color: #fff;
+    border-color: #d80b0b;
+}
+
+.checkbox-container input:checked + .box .cross svg {
+    transform: rotate(405deg);
+    stroke: #fff; /* Cambia el color del icono al seleccionar */
+}
