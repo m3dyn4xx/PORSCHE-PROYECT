@@ -163,28 +163,28 @@
                     <h4>Modelos</h4>
                     <label class="checkbox-container">
                         <input type="checkbox" class="b911">
-                        <div class="box">
+                        <div class="box c911">
                             <span class="cross"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg></span>
                             <span>911</span>
                         </div>
                     </label>
                     <label class="checkbox-container">
                         <input type="checkbox" class="b718">
-                        <div class="box">
+                        <div class="box c718">
                             <span class="cross"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg></span>
                             <span>718</span>
                         </div>
                     </label>
                     <label class="checkbox-container">
                         <input type="checkbox" class="bTaycan">
-                        <div class="box">
+                        <div class="box cTaycan">
                             <span class="cross"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg></span>
                             <span>Taycan</span>
                         </div>
                     </label>
                     <label class="checkbox-container">
                         <input type="checkbox" class="bCayenne">
-                        <div class="box">
+                        <div class="box cCayenne">
                             <span class="cross"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg></span>
                             <span>Cayenne</span>
                         </div>
@@ -243,10 +243,10 @@
                             Modelos 718 Cayman GT4 RS
                         </h1>
                         <div class="cards">
-                            <div class="card">
+                            <div class="card"  onclick="window.location.href='compra718Cayman.html'" style="cursor: pointer;">
                                 <img src="Imagenes/718CaymanGT4RS.avif" alt="">
                                 <div class="txt">
-                                    <p>911 GT3 <br>Desde EUR 180.709,00 PVP Recomendado¹</p>
+                                    <p>718 Cayman GT4 RS <br>Desde EUR 180.709,00 PVP Recomendado¹</p>
                                 </div>
                             </div>
                         </div>
@@ -257,7 +257,7 @@
                             Modelos 718 Spyder RS
                         </h1>
                         <div class="cards">
-                            <div class="card">
+                            <div class="card" onclick="window.location.href='compra718Spyder.html'" style="cursor: pointer;">
                                 <img src="Imagenes/718SpyderRS.avif" alt="">
                                 <div class="txt">
                                     <p>718 Spyder RS <br>Desde EUR 180.709,00 PVP Recomendado¹</p>
@@ -271,7 +271,7 @@
                             Modelos Taycan
                         </h1>
                         <div class="cards">
-                            <div class="card">
+                            <div class="card" >
                                 <img src="Imagenes/Taycan.avif" alt="">
                                 <div class="txt">
                                     <p>Taycan <br>Desde EUR 105.682,00 PVP Recomendado¹</p>
@@ -365,10 +365,14 @@
 
     <script>
         
-        const c911 = document.querySelector(".b911")
+        const b911 = document.querySelector(".b911")
         const b718 = document.querySelector(".b718")
         const bCayenne = document.querySelector(".bCayenne")
         const bTaycan = document.querySelector(".bTaycan")
+        const box911 = document.querySelector(".c911")
+        const box718 = document.querySelector(".c718")
+        const boxTaycan = document.querySelector(".cTaycan")
+        const boxCayenne = document.querySelector(".cCayenne")
 
         const p911 = document.querySelectorAll(".p911")
         const p718 = document.querySelectorAll(".p718")
@@ -379,14 +383,21 @@
         b911.addEventListener('change',() =>{
             if (b911.checked) {
                 b718.disabled = true;
-                b718.classList.remove('box')
-                b718.classList.add('boxDisabled')
                 bCayenne.disabled = true;
                 bTaycan.disabled = true;
+
+                box718.classList.remove('box');
+                box718.classList.add('boxDisabled');
+                
+                boxTaycan.classList.remove('box');
+                boxTaycan.classList.add('boxDisabled');
+                boxCayenne.classList.remove('box');
+                boxCayenne.classList.add('boxDisabled');
+
                 p718.forEach(element => {
                     element.style.display = "none";
-                });
 
+                });
                 pTaycan.forEach(element => {
                     element.style.display = "none";
                 });
@@ -397,6 +408,12 @@
                 b718.disabled = false;
                 bCayenne.disabled = false;
                 bTaycan.disabled = false;
+                box718.classList.add('box');
+                box718.classList.remove('boxDisabled');
+                boxTaycan.classList.add('box');
+                boxTaycan.classList.remove('boxDisabled');
+                boxCayenne.classList.add('box');
+                boxCayenne.classList.remove('boxDisabled');
                 p718.forEach(element => {
                     element.style.display = "block";
                 });
@@ -413,6 +430,15 @@
                 b911.disabled = true;
                 bCayenne.disabled = true;
                 bTaycan.disabled = true;
+
+                box911.classList.remove('box');
+                box911.classList.add('boxDisabled');
+                
+                boxTaycan.classList.remove('box');
+                boxTaycan.classList.add('boxDisabled');
+                boxCayenne.classList.remove('box');
+                boxCayenne.classList.add('boxDisabled');
+
                 p911.forEach(element => {
                     element.style.display = "none";
                 });
@@ -426,6 +452,14 @@
                 b911.disabled = false;
                 bCayenne.disabled = false;
                 bTaycan.disabled = false;
+
+                box911.classList.add('box');
+                box911.classList.remove('boxDisabled');
+                boxTaycan.classList.add('box');
+                boxTaycan.classList.remove('boxDisabled');
+                boxCayenne.classList.add('box');
+                boxCayenne.classList.remove('boxDisabled');
+
                 p911.forEach(element => {
                     element.style.display = "block";
                 });
@@ -442,6 +476,15 @@
                 b718.disabled = true;
                 b911.disabled = true;
                 bTaycan.disabled = true;
+
+                box718.classList.remove('box');
+                box718.classList.add('boxDisabled');
+                
+                boxTaycan.classList.remove('box');
+                boxTaycan.classList.add('boxDisabled');
+                box911.classList.remove('box');
+                box911.classList.add('boxDisabled');
+
                 p718.forEach(element => {
                     element.style.display = "none";
                 });
@@ -455,6 +498,14 @@
                 b718.disabled = false;
                 bTaycan.disabled = false;
                 b911.disabled = false;
+
+                box718.classList.add('box');
+                box718.classList.remove('boxDisabled');
+                boxTaycan.classList.add('box');
+                boxTaycan.classList.remove('boxDisabled');
+                box911.classList.add('box');
+                box911.classList.remove('boxDisabled');
+
                 p718.forEach(element => {
                     element.style.display = "block";
                 });
@@ -472,6 +523,15 @@
                 b718.disabled = true;
                 b911.disabled = true;
                 bCayenne.disabled = true;
+
+                box718.classList.remove('box');
+                box718.classList.add('boxDisabled');
+                
+                box911.classList.remove('box');
+                box911.classList.add('boxDisabled');
+                boxCayenne.classList.remove('box');
+                boxCayenne.classList.add('boxDisabled');
+
                 p718.forEach(element => {
                     element.style.display = "none";
                 });
@@ -485,6 +545,14 @@
                 b718.disabled = false;
                 b911.disabled = false;
                 bCayenne.disabled = false;
+
+                box718.classList.add('box');
+                box718.classList.remove('boxDisabled');
+                box911.classList.add('box');
+                box911.classList.remove('boxDisabled');
+                boxCayenne.classList.add('box');
+                boxCayenne.classList.remove('boxDisabled');
+
                 p718.forEach(element => {
                     element.style.display = "block";
                 });

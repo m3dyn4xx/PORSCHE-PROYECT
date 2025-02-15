@@ -511,7 +511,7 @@ body {
     align-items: center;
     gap: 8px;
     padding: 10px 20px;
-    border: 2px solid grey;
+    border: 2px solid #000;
     border-radius: 4px;
     font-size: 16px;
     font-weight: bold;
@@ -519,6 +519,8 @@ body {
     user-select: none;
     background-color: #fff;
     color: #000;
+    opacity: 0.3;
+    cursor:default;
 }
 .box:hover{
     color: #d80b0b;
