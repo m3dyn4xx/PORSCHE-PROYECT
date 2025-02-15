@@ -365,7 +365,7 @@
 
     <script>
         
-        const b911 = document.querySelector(".b911")
+        const c911 = document.querySelector(".b911")
         const b718 = document.querySelector(".b718")
         const bCayenne = document.querySelector(".bCayenne")
         const bTaycan = document.querySelector(".bTaycan")
@@ -379,8 +379,8 @@
         b911.addEventListener('change',() =>{
             if (b911.checked) {
                 b718.disabled = true;
-                b718.style.border = "grey 1px solid"
-
+                b718.classList.remove('box')
+                b718.classList.add('boxDisabled')
                 bCayenne.disabled = true;
                 bTaycan.disabled = true;
                 p718.forEach(element => {
